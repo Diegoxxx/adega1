@@ -109,6 +109,22 @@ public class Tela_Excluir_Vinho extends javax.swing.JFrame {
 
     private void excluir_vinhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluir_vinhoActionPerformed
         
+        
+        RefeicaoDao aux2 = new RefeicaoDao();
+        List<Refeicao> refeicoes = new ArrayList<>();
+                      
+        refeicoes = aux2.getRefeicoes();
+        
+        for (Refeicao ref : refeicoes) {
+            
+            if(ref.getNome_Vinho().equals(jTextField1.getText()))
+            {
+                JOptionPane.showMessageDialog(null,"Há uma refeição fazendo referência a este vinho!");
+                return;
+            }
+            
+        }     
+        
         VinhoDao vinho = new VinhoDao();
         
         VinhoDao aux = new VinhoDao();
