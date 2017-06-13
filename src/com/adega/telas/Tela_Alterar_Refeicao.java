@@ -6,7 +6,9 @@
 package com.adega.telas;
 
 import com.adega.dao.RefeicaoDao;
+import com.adega.dao.VinhoDao;
 import com.adega.modelo.Refeicao;
+import com.adega.modelo.Vinho;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -185,18 +187,36 @@ public class Tela_Alterar_Refeicao extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Campo Descrição em branco!");
             return;
         }
+        
+        VinhoDao auxx = new VinhoDao();
+        List<Vinho> vinhos = new ArrayList<>();
+                      
+        vinhos = auxx.getVinhos();
+        
+        for (Vinho vin : vinhos) {
+            //System.out.println(vin.getNome());
+            if(vin.getNome().equals(refeicao_Vinho.getText()))
+            {
+                
+                RefeicaoDao refeicao = new RefeicaoDao();
+                Refeicao ref = new Refeicao(refeicao_Nome.getText(), refeicao_Descricao.getText(), refeicao_Vinho.getText());
+        
+                refeicao.alteraRefeicao(ref);
+        
+                JOptionPane.showMessageDialog(null,"Refeição alterada com sucesso!");
+        
+                dispose(); 
+                Tela_Gerenciar_Vinho_Refeição a = new Tela_Gerenciar_Vinho_Refeição();
+                a.setVisible(true);
+                
+            }
+        }
+        
+        
+        
         //alterar dados no banco se OK...
         
-        RefeicaoDao refeicao = new RefeicaoDao();
-        Refeicao ref = new Refeicao(refeicao_Nome.getText(), refeicao_Descricao.getText(), refeicao_Vinho.getText());
         
-        refeicao.alteraRefeicao(ref);
-        
-        JOptionPane.showMessageDialog(null,"Refeição alterada com sucesso!");
-        
-        dispose(); 
-        Tela_Gerenciar_Vinho_Refeição a = new Tela_Gerenciar_Vinho_Refeição();
-        a.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
