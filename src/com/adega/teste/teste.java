@@ -6,7 +6,7 @@ import com.adega.tabela.Tabela;
 
 public class teste {
 	public static void main(String[] args) {
-		Vinho vinho = new Vinho("Pudim", "11/11/2011", "aurora", "2010", "tinto", "vermelho");
+		Vinho vinho = new Vinho("Gato Negro", "11/11/2011", "aurora", "2010", "tinto", "vermelho");
 		VinhoDao dao = new VinhoDao();
 		
 		//System.out.println("Adicionado com sucesso");

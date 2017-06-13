@@ -146,7 +146,7 @@ public class Tela_Excluir_Vinho extends javax.swing.JFrame {
             }
         }
         
-        JOptionPane.showMessageDialog(null,"Vinho não cadastrada!");
+        JOptionPane.showMessageDialog(null,"Vinho não cadastrado!");
         
         
         /*
