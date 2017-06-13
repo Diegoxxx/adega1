@@ -80,12 +80,14 @@ public class Tela_Alterar_Refeicao extends javax.swing.JFrame {
             }
         });
 
+        refeicao_Vinho.setEditable(false);
         refeicao_Vinho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refeicao_VinhoActionPerformed(evt);
             }
         });
 
+        refeicao_Descricao.setEditable(false);
         refeicao_Descricao.setColumns(20);
         refeicao_Descricao.setRows(5);
         jScrollPane1.setViewportView(refeicao_Descricao);
@@ -242,6 +244,10 @@ public class Tela_Alterar_Refeicao extends javax.swing.JFrame {
                 refeicao_Descricao.setText(ref.getDescricao());
                 jButton1.setEnabled(true);
                 refeicao_Nome.setEditable(false);
+                
+                refeicao_Descricao.setEditable(true);
+                refeicao_Vinho.setEditable(true);
+                
                 return;
             }
         }

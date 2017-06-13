@@ -95,30 +95,35 @@ public class Tela_Alterar_Vinho extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Preço:");
 
+        vinho_Fabricante.setEditable(false);
         vinho_Fabricante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vinho_FabricanteActionPerformed(evt);
             }
         });
 
+        vinho_Ano.setEditable(false);
         vinho_Ano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vinho_AnoActionPerformed(evt);
             }
         });
 
+        vinho_Acucarado.setEditable(false);
         vinho_Acucarado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vinho_AcucaradoActionPerformed(evt);
             }
         });
 
+        vinho_Aroma.setEditable(false);
         vinho_Aroma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vinho_AromaActionPerformed(evt);
             }
         });
 
+        vinho_Preco.setEditable(false);
         vinho_Preco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vinho_PrecoActionPerformed(evt);
@@ -310,6 +315,13 @@ public class Tela_Alterar_Vinho extends javax.swing.JFrame {
                 
                 jButton1.setEnabled(true);
                 vinho_Nome.setEditable(false);
+                
+                vinho_Acucarado.setEditable(true);
+                vinho_Ano.setEditable(true);
+                vinho_Aroma.setEditable(true);
+                vinho_Fabricante.setEditable(true);
+                vinho_Preco.setEditable(true);
+                
                 return;
                 
             }
