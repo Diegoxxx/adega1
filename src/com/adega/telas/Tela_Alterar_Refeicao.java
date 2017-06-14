@@ -175,11 +175,7 @@ public class Tela_Alterar_Refeicao extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(refeicao_Nome.getText().length() == 0)
-        {
-            JOptionPane.showMessageDialog(null,"Campo Nome em branco!");
-            return;
-        }if(refeicao_Vinho.getText().length() == 0)
+        if(refeicao_Vinho.getText().length() == 0)
         {
             JOptionPane.showMessageDialog(null,"Campo Vinho em branco!");
             return;
@@ -230,7 +226,11 @@ public class Tela_Alterar_Refeicao extends javax.swing.JFrame {
 
     private void verifaca_RefeicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verifaca_RefeicaoActionPerformed
         // verifica se refeiçao esta cadastrada
-        
+        if(refeicao_Nome.getText().length() == 0)
+        {
+            JOptionPane.showMessageDialog(null,"Campo Nome em branco!");
+            return;
+        }
         RefeicaoDao aux = new RefeicaoDao();
         List<Refeicao> refeicoes = new ArrayList<>();
                       
