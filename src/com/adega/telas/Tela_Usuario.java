@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
 
@@ -240,6 +241,14 @@ public class Tela_Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String s = jList1.getSelectedValue();
+        
+        
+        if(jList1.getSelectedIndex() == -1)//verifica se algum item foi selecionado
+        {
+        
+            JOptionPane.showMessageDialog(null,"Selecione uma refeição");
+            
+        }
         
         RefeicaoDao aux = new RefeicaoDao();
         
