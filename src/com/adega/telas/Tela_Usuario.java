@@ -246,7 +246,7 @@ public class Tela_Usuario extends javax.swing.JFrame {
         if(jList1.getSelectedIndex() == -1)//verifica se algum item foi selecionado
         {
         
-            JOptionPane.showMessageDialog(null,"Selecione uma refeição");
+            JOptionPane.showMessageDialog(null,"Selecione uma refeição!");
             
         }
         
