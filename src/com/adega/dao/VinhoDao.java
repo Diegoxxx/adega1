@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.adega.jdbc.ConnectionFactory;
 import com.adega.modelo.Vinho;
+import javax.swing.JOptionPane;
 
 public class VinhoDao {
 	Connection conexao = new ConnectionFactory().getConnection();
@@ -133,5 +134,5 @@ public class VinhoDao {
             
             return list;
         }
-        
+                       
 }

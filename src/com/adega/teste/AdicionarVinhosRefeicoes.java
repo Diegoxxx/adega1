@@ -6,27 +6,16 @@ import com.adega.modelo.Refeicao;
 import com.adega.modelo.Vinho;
 import com.adega.tabela.Tabela;
 
-public class teste {
+public class AdicionarVinhosRefeicoes {
 	public static void main(String[] args) {
 		Vinho vinho;
 		VinhoDao dao = new VinhoDao();
-                
+                                
                 Refeicao refei;
-                RefeicaoDao addRef = new RefeicaoDao();
-		
-		
-		//VinhoDao vinho2 = new VinhoDao();
-		//Vinho vinho2 = new Vinho(1,"Sangue de vaca", "10/10/2005", "italac", "2005", "tinto", "roxo", "muito bom");
-		
-		//dao.alteraVinho(vinho2);
-		//dao.removeVinho("1");
-		
-                Tabela tabela = new Tabela();
-                //tabela.criaTabelaVinho();
-                //tabela.criaTabelaRefeicao();
+                RefeicaoDao addRef = new RefeicaoDao();           
                 
                 vinho = new Vinho("Gato Negro", "Vinhos Burgues", "2015", "Medio", "citrico", "25,00");
-                dao.adicionaVinho(vinho);
+                dao.adicionaVinho(vinho);                            
                 vinho = new Vinho("Black Cat", "Aurora", "1995", "Moderado", "amadeirado", "45,00");
                 dao.adicionaVinho(vinho);
                 vinho = new Vinho("Sangue de Boi", "Italac", "2000", "Doce", "doce", "85,00");
@@ -38,10 +27,13 @@ public class teste {
                 addRef.adicionaRefeicao(refei);
                 refei = new Refeicao("Escargot", "Ostras ao molho xadrez", "Black Cat");
                 addRef.adicionaRefeicao(refei);
-                refei = new Refeicao(" Vitela ao Porto", "Carne de vitela macia e suculenta.", "Sangue de Boi");
+                refei = new Refeicao("Vitela ao Porto", "Carne de vitela macia e suculenta.", "Sangue de Boi");
                 addRef.adicionaRefeicao(refei);
                 refei = new Refeicao("Magret de pato", "Ao perfume de mel e especiarias.", "Digestivo Padrão");
                 addRef.adicionaRefeicao(refei);
+                
+                         
+                
 	}
 	
 }

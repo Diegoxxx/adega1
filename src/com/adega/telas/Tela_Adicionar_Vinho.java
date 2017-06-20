@@ -246,11 +246,11 @@ public class Tela_Adicionar_Vinho extends javax.swing.JFrame {
             return;
         }
     Vinho vinheto = new Vinho(vinho_Nome.getText(),
-            vinho_Fabricante.getText(),
-            vinho_Ano.getText(),
-            vinho_Acucarado.getText(),
-            vinho_Aroma.getText(),
-            vinho_Preco.getText());
+                              vinho_Fabricante.getText(),
+                              vinho_Ano.getText(),
+                              vinho_Acucarado.getText(),
+                              vinho_Aroma.getText(),
+                              vinho_Preco.getText());
         //System.out.println(vinho_Nome.getText());
         VinhoDao aux = new VinhoDao();
         List<Vinho> vinhos = new ArrayList<>();
