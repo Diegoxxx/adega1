@@ -32,7 +32,14 @@ public class AdicionarVinhosRefeicoes {
                 refei = new Refeicao("Magret de pato", "Ao perfume de mel e especiarias.", "Digestivo Padrão");
                 addRef.adicionaRefeicao(refei);
                 
-                         
+                vinho = new Vinho("Gato Negro", "Vinhos Alfavile", "1995", "Forte", "Mel e limão", "85,00");
+                dao.alteraVinho(vinho);
+                
+                refei = new Refeicao("Caviar", "De Carpa Inglesa", "Digestivo Padrão");
+                addRef.alteraRefeicao(refei);
+                
+                dao.removeVinho("Gato Negro");
+                addRef.removeRefeicao("Caviar");
                 
 	}
 	
